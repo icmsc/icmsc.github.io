@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bíblia</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-size: 14px;
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+		main {
+			padding: 0px;
+		}
+
+		#title {
+			text-align: center;
+			font-weight: bold;
+			background: #D61E25;
+			color: #FFFFFF;
+			height: 60px;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+		svg {
+			height: 30px;
+			fill: #FFFFFF;
+		}
+
+		#seletores {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			background: #e6e6e6;
+			padding: 0px 10px;
+		}
+		#bi_capitulos {
+			display: flex;
+			flex: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 10px auto;
+		}
+
+		#conteudo {
+			padding: 10px;
+		}
+		#bi_livrocapitulo {
+			font-size: 22px;
+			font-weight: bold;
+			margin: 10px 0px;
+		}
+		.bi_versiculo {
+			margin: 4px 0px;
+			text-align: justify;
+		}
+		.bi_versiculo_numero {
+			color: #D61E25;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+	<main>
+
+
+		<section id="title">
+				<svg viewBox="0 0 400 92.18106995884773">
+					<path d="M51.917 6.583 C 51.825 6.615,51.394 6.688,50.959 6.747 C 48.467 7.083,48.657 9.009,51.260 9.800 C 54.769 10.865,55.402 13.782,52.750 16.667 C 50.813 18.774,50.894 19.833,52.994 19.833 C 59.289 19.833,64.202 9.978,59.241 7.301 C 58.046 6.657,53.114 6.173,51.917 6.583 M43.417 27.148 C 41.751 28.104,40.495 29.616,26.646 47.333 C 24.676 49.854,22.470 52.704,21.745 53.667 C 16.340 60.838,14.318 63.253,9.500 68.295 C 2.648 75.465,1.953 76.429,2.929 77.405 C 4.012 78.489,6.142 76.977,10.308 72.167 C 11.460 70.837,13.159 68.925,14.085 67.917 C 16.043 65.784,17.608 63.913,20.500 60.248 C 24.457 55.232,25.480 55.354,26.096 60.917 C 28.676 84.220,47.121 93.965,70.450 84.349 C 78.022 81.228,82.094 78.376,90.333 70.419 C 97.786 63.223,106.722 54.939,109.743 52.428 C 117.845 45.692,125.663 45.393,128.668 51.705 C 130.886 56.362,130.639 61.622,127.480 77.000 C 126.287 82.805,126.701 85.167,128.911 85.167 C 131.086 85.167,133.266 83.239,145.444 70.548 C 153.597 62.053,154.725 61.094,158.754 59.232 C 165.436 56.145,171.755 57.922,173.843 63.476 C 174.608 65.511,174.692 66.406,174.825 73.917 C 174.979 82.648,175.349 84.538,177.268 86.401 C 180.640 89.676,184.331 86.634,191.501 74.667 C 195.374 68.203,205.463 53.696,207.274 51.987 C 212.232 47.308,218.106 46.851,221.735 50.860 C 223.832 53.178,224.674 56.350,225.246 64.083 C 225.920 73.206,227.215 76.992,230.810 80.359 C 236.869 86.033,244.770 86.146,260.750 80.785 C 278.970 74.674,280.788 74.190,287.550 73.664 C 297.064 72.923,308.084 74.510,325.167 79.084 C 345.881 84.630,352.619 85.848,365.242 86.330 C 376.609 86.764,391.335 84.419,392.850 81.934 C 394.102 79.880,392.408 79.164,388.218 79.976 C 385.593 80.485,379.067 81.463,375.583 81.869 C 374.469 81.998,371.755 82.081,368.667 82.080 C 356.276 82.073,342.940 80.065,330.667 76.357 C 301.997 67.697,289.245 67.531,265.333 75.505 C 249.520 80.779,241.218 80.868,236.145 75.817 C 233.391 73.075,232.466 70.052,231.666 61.167 C 230.457 47.736,228.290 43.678,221.417 41.971 C 211.383 39.480,203.444 46.654,187.911 72.250 C 184.093 78.542,183.070 78.527,182.256 72.167 C 180.483 58.302,176.250 52.328,167.884 51.884 C 160.569 51.495,153.774 54.960,145.083 63.509 C 141.369 67.163,140.542 67.833,139.751 67.833 C 138.508 67.833,138.509 67.838,138.663 59.250 C 138.848 48.991,134.108 42.862,125.750 42.549 C 118.732 42.287,112.322 45.543,105.500 52.835 C 99.034 59.747,86.868 69.729,79.000 74.579 C 64.926 83.255,48.770 83.544,40.583 75.267 C 30.136 64.704,31.261 46.673,43.230 32.833 C 46.211 29.387,46.897 27.921,45.948 27.029 C 45.394 26.509,44.453 26.553,43.417 27.148"></path>
+					<text x="240" y="40" style="font-family:Helvetica; font-size:180%; stroke:none; fill:#fff; fill-opacity:1"></text>
+				</svg>
+				<div>Bíblia - Versão ACF</div>
+			</div>
+		</section>
+
+
+		<section id="seletores">
+
+			<div>
+			<select id="bi_livros">
+				<option value="gn">Gênesis</option>
+				<option value="ex">Êxodo</option>
+				<option value="lv">Levítico</option>
+				<option value="nm">Números</option>
+				<option value="dt">Deuteronômio</option>
+				<option value="js">Josué</option>
+				<option value="jz">Juízes</option>
+				<option value="rt">Rute</option>
+				<option value="1sm">1 Samuel</option>
+				<option value="2sm">2 Samuel</option>
+				<option value="1rs">1 Reis</option>
+				<option value="2rs">2 Reis</option>
+				<option value="1cr">1 Crônicas</option>
+				<option value="2cr">2 Crônicas</option>
+				<option value="ed">Esdras</option>
+				<option value="ne">Neemias</option>
+				<option value="et">Ester</option>
+				<option value="jó">Jó</option>
+				<option value="sl">Salmos</option>
+				<option value="pv">Provérbios</option>
+				<option value="ec">Eclesiastes</option>
+				<option value="ct">Cânticos</option>
+				<option value="is">Isaías</option>
+				<option value="jr">Jeremias</option>
+				<option value="lm">Lamentações de Jeremias</option>
+				<option value="ez">Ezequiel</option>
+				<option value="dn">Daniel</option>
+				<option value="os">Oséias</option>
+				<option value="jl">Joel</option>
+				<option value="am">Amós</option>
+				<option value="ob">Obadias</option>
+				<option value="jn">Jonas</option>
+				<option value="mq">Miquéias</option>
+				<option value="na">Naum</option>
+				<option value="hc">Habacuque</option>
+				<option value="sf">Sofonias</option>
+				<option value="ag">Ageu</option>
+				<option value="zc">Zacarias</option>
+				<option value="ml">Malaquias</option>
+				<option value="mt">Mateus</option>
+				<option value="mc">Marcos</option>
+				<option value="lc">Lucas</option>
+				<option value="jo">João</option>
+				<option value="atos">Atos</option>
+				<option value="rm">Romanos</option>
+				<option value="1co">1 Coríntios</option>
+				<option value="2co">2 Coríntios</option>
+				<option value="gl">Gálatas</option>
+				<option value="ef">Efésios</option>
+				<option value="fp">Filipenses</option>
+				<option value="cl">Colossenses</option>
+				<option value="1ts">1 Tessalonicenses</option>
+				<option value="2ts">2 Tessalonicenses</option>
+				<option value="1tm">1 Timóteo</option>
+				<option value="2tm">2 Timóteo</option>
+				<option value="tt">Tito</option>
+				<option value="fm">Filemom</option>
+				<option value="hb">Hebreus</option>
+				<option value="tg">Tiago</option>
+				<option value="1pe">1 Pedro</option>
+				<option value="2pe">2 Pedro</option>
+				<option value="1jo">1 João</option>
+				<option value="2jo">2 João</option>
+				<option value="3jo">3 João</option>
+				<option value="jd">Judas</option>
+				<option value="ap">Apocalipse</option>
+			</select>
+			</div>
+
+			<div>
+			<select id="bi_capitulos">
+			</select>
+			</div>
+
+		</section>
+
+
+		<section id="conteudo">
+
+			<div id="bi_livrocapitulo"></div>
+			<div id="bi_capitulo_texto"></div>
+
+		</section>
+
+
+	</main>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="../assets/jquery-3.6.1.min.js"></script>
+	<script type="text/javascript" src="acf.js"></script>
+	<script type="text/javascript">
+		const livrosQuantidade = biblia.length;
+		const livrosChaves = {"gn": 0, "ex": 1, "lv": 2, "nm": 3, "dt": 4, "js": 5, "jz": 6, "rt": 7, "1sm": 8, "2sm": 9, "1rs": 10, "2rs": 11, "1cr": 12, "2cr": 13, "ed": 14, "ne": 15, "et": 16, "jó": 17, "sl": 18, "pv": 19, "ec": 20, "ct": 21, "is": 22, "jr": 23, "lm": 24, "ez": 25, "dn": 26, "os": 27, "jl": 28, "am": 29, "ob": 30, "jn": 31, "mq": 32, "na": 33, "hc": 34, "sf": 35, "ag": 36, "zc": 37, "ml": 38, "mt": 39, "mc": 40, "lc": 41, "jo": 42, "atos": 43, "rm": 44, "1co": 45, "2co": 46, "gl": 47, "ef": 48, "fp": 49, "cl": 50, "1ts": 51, "2ts": 52, "1tm": 53, "2tm": 54, "tt": 55, "fm": 56, "hb": 57, "tg": 58, "1pe": 59, "2pe": 60, "1jo": 61, "2jo": 62, "3jo": 63, "jd": 64, "ap": 65};
+		// get livros
+		// var livrosNomes = [];
+		// for (var i = 0; i < livrosQuantidade; i++) {
+		// 	livrosNomes.push(biblia[i]['abbrev']);
+		// 	$("#bi_livros").append('<option value="'+biblia[i]['abbrev']+'">'+biblia[i]['name']+'</option>');
+		// }
+		function infoLeitura(livro,capitulo) {
+			$("#bi_livrocapitulo").text(livro+" "+capitulo);
+		}
+		function readCapitulos(livro) {
+			$("#bi_capitulos").empty();
+			$("#bi_capitulo_texto").empty();
+			for (var i = 0; i < biblia[livro]['chapters'].length; i++) {
+				$("#bi_capitulos").append('<option value="'+i+'">'+(i+1)+'</option>');
+			}
+			readVersiculos(livro,0);
+			infoLeitura(biblia[livro]['name'], 1);
+		}
+		function readVersiculos(livro,capitulo) {
+			$("#bi_capitulo_texto").empty();
+			for (var i = 0; i < biblia[livro]['chapters'][capitulo].length; i++) {
+				$("#bi_capitulo_texto").append('<div class="bi_versiculo"><span class="bi_versiculo_numero">'+(i+1)+'</span> '+biblia[livro]['chapters'][capitulo][i]+'</div>');
+			}
+			infoLeitura(biblia[livro]['name'], parseInt(capitulo)+1);
+		}
+		$(document).ready(function(){
+			readCapitulos(livrosChaves["gn"]);
+		});
+		$("#bi_livros").change(function(){
+			readCapitulos(livrosChaves[$(this).val()]);
+		});
+		$("#bi_capitulos").on("change",function(){
+			readVersiculos(livrosChaves[$("#bi_livros").val()],$(this).val());
+		});
+	</script>
+
+</body>
+</html>
