@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aniversários</title>
+	<style type="text/css">
+		
+		* {
+			font-family: sans-serif;
+			font-size: 13px;
+			margin: 0;
+			padding: 0;
+			outline: none;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: #E6E6E6;
+		}
+
+		main {
+			background: #FFFFFF;
+			padding: 10px;
+		}
+
+		#title {
+			text-align: center;
+			font-weight: bold;
+			background: #D61E25;
+			color: #FFFFFF;
+			height: 60px;
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5px;
+		}
+		svg {
+			height: 30px;
+			fill: #FFFFFF;
+		}
+
+		.month {
+			font-weight: bold;
+			background: tomato;
+			color: #FFFFFF;
+			height: 30px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 5px;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+		.day {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background: #E6E6E6;
+			margin-top: 5px;
+			padding: 5px;
+			border-radius: 5px;
+		}
+		.daynumber {
+			margin-right: 15px;
+		}
+		.today {
+			background: #B8DB8A;
+		}
+		.tomorrow {
+			background: #FFCFC7;
+		}
+
+		#share {
+			background: #25D366;
+			color: #FFFFFF;
+			font-weight: bold;
+			width: 80%;
+			min-width: 240px;
+			margin: 10px auto 0px auto;
+			border-radius: 5px;
+			padding: 15px;
+			text-align: center;
+		}
+		#shareaction {
+			margin-top: 10px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<main>
+		
+		<section id="title">
+			<svg viewBox="0 0 400 92.18106995884773">
+				<path d="M51.917 6.583 C 51.825 6.615,51.394 6.688,50.959 6.747 C 48.467 7.083,48.657 9.009,51.260 9.800 C 54.769 10.865,55.402 13.782,52.750 16.667 C 50.813 18.774,50.894 19.833,52.994 19.833 C 59.289 19.833,64.202 9.978,59.241 7.301 C 58.046 6.657,53.114 6.173,51.917 6.583 M43.417 27.148 C 41.751 28.104,40.495 29.616,26.646 47.333 C 24.676 49.854,22.470 52.704,21.745 53.667 C 16.340 60.838,14.318 63.253,9.500 68.295 C 2.648 75.465,1.953 76.429,2.929 77.405 C 4.012 78.489,6.142 76.977,10.308 72.167 C 11.460 70.837,13.159 68.925,14.085 67.917 C 16.043 65.784,17.608 63.913,20.500 60.248 C 24.457 55.232,25.480 55.354,26.096 60.917 C 28.676 84.220,47.121 93.965,70.450 84.349 C 78.022 81.228,82.094 78.376,90.333 70.419 C 97.786 63.223,106.722 54.939,109.743 52.428 C 117.845 45.692,125.663 45.393,128.668 51.705 C 130.886 56.362,130.639 61.622,127.480 77.000 C 126.287 82.805,126.701 85.167,128.911 85.167 C 131.086 85.167,133.266 83.239,145.444 70.548 C 153.597 62.053,154.725 61.094,158.754 59.232 C 165.436 56.145,171.755 57.922,173.843 63.476 C 174.608 65.511,174.692 66.406,174.825 73.917 C 174.979 82.648,175.349 84.538,177.268 86.401 C 180.640 89.676,184.331 86.634,191.501 74.667 C 195.374 68.203,205.463 53.696,207.274 51.987 C 212.232 47.308,218.106 46.851,221.735 50.860 C 223.832 53.178,224.674 56.350,225.246 64.083 C 225.920 73.206,227.215 76.992,230.810 80.359 C 236.869 86.033,244.770 86.146,260.750 80.785 C 278.970 74.674,280.788 74.190,287.550 73.664 C 297.064 72.923,308.084 74.510,325.167 79.084 C 345.881 84.630,352.619 85.848,365.242 86.330 C 376.609 86.764,391.335 84.419,392.850 81.934 C 394.102 79.880,392.408 79.164,388.218 79.976 C 385.593 80.485,379.067 81.463,375.583 81.869 C 374.469 81.998,371.755 82.081,368.667 82.080 C 356.276 82.073,342.940 80.065,330.667 76.357 C 301.997 67.697,289.245 67.531,265.333 75.505 C 249.520 80.779,241.218 80.868,236.145 75.817 C 233.391 73.075,232.466 70.052,231.666 61.167 C 230.457 47.736,228.290 43.678,221.417 41.971 C 211.383 39.480,203.444 46.654,187.911 72.250 C 184.093 78.542,183.070 78.527,182.256 72.167 C 180.483 58.302,176.250 52.328,167.884 51.884 C 160.569 51.495,153.774 54.960,145.083 63.509 C 141.369 67.163,140.542 67.833,139.751 67.833 C 138.508 67.833,138.509 67.838,138.663 59.250 C 138.848 48.991,134.108 42.862,125.750 42.549 C 118.732 42.287,112.322 45.543,105.500 52.835 C 99.034 59.747,86.868 69.729,79.000 74.579 C 64.926 83.255,48.770 83.544,40.583 75.267 C 30.136 64.704,31.261 46.673,43.230 32.833 C 46.211 29.387,46.897 27.921,45.948 27.029 C 45.394 26.509,44.453 26.553,43.417 27.148"></path>
+				<text x="240" y="40" style="font-family:Helvetica; font-size:180%; stroke:none; fill:#fff; fill-opacity:1"></text>
+			</svg>
+			<div>Aniversários - Campinas</div>
+		</section>
+
+		<section id="share" onclick="shareNiver()">
+			<div id="sharenames">Hoje é aniversário de <span id="shareNiverName"></span>!</div>
+			<div id="shareaction">Compartilhar no WhatsApp</div>
+		</section>
+
+		<section id="content">
+		</section>
+
+	</main>
+
+	<script type="text/javascript">
+
+		// arrays
+		const semana = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+		const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+
+		const niver = [
+			{"mes":"01", "dia":"10", "sexo":"M", "nome":"LORENZO SANTOS"},
+			{"mes":"01", "dia":"11", "sexo":"M", "nome":"ANDRÉ RICARDO POLICARPO DE SOUZA"},
+			{"mes":"01", "dia":"17", "sexo":"F", "nome":"SUELI TEREZINHA NAZARIO"},
+			{"mes":"01", "dia":"20", "sexo":"F", "nome":"DANIELLE ABRAHÃO BARROS DA SILVA"},
+			{"mes":"01", "dia":"20", "sexo":"F", "nome":"THAIS DIAS"},
+			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ISABELA ESCOBAR CORRÊA"},
+			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ELIZIANA DA SILVA PEREIRA LENTZ"},
+			{"mes":"01", "dia":"23", "sexo":"F", "nome":"SONIA REGINA PASSO DE ALMEIDA"},
+			{"mes":"01", "dia":"25", "sexo":"F", "nome":"VALDIMARA DOS SANTOS"},
+			{"mes":"01", "dia":"27", "sexo":"M", "nome":"DANIEL DOS SANTOS PEREIRA"},
+			{"mes":"01", "dia":"31", "sexo":"M", "nome":"RICARDO LENTZ"},
+			{"mes":"02", "dia":"03", "sexo":"F", "nome":"THAÍS DA SILVA BUENO DE CAMARGO"},
+			{"mes":"02", "dia":"03", "sexo":"M", "nome":"ZANDONAITY SOARES TEIXEIRA DE ASSIS"},
+			{"mes":"02", "dia":"11", "sexo":"F", "nome":"SOFIA LOPES GARCIA"},
+			{"mes":"02", "dia":"13", "sexo":"F", "nome":"SOFIA ESPÍNDOLA ROSA"},
+			{"mes":"02", "dia":"14", "sexo":"F", "nome":"VITÓRIA ABRAHÃO DA SILVA"},
+			{"mes":"02", "dia":"16", "sexo":"M", "nome":"DANIEL BARBI DA SILVA"},
+			{"mes":"02", "dia":"20", "sexo":"M", "nome":"EDUARDO SEEFELD FERREIRA"},
+			{"mes":"03", "dia":"01", "sexo":"F", "nome":"DAIANE KLOPPEL"},
+			{"mes":"03", "dia":"02", "sexo":"F", "nome":"ELLEN IMBURGUE WEBER DA SILVA"},
+			{"mes":"03", "dia":"05", "sexo":"F", "nome":"LAINARA TEODÓSIO BARBI"},
+			{"mes":"03", "dia":"05", "sexo":"M", "nome":"ERICKSEN DOUGLAS PSCHEIDT"},
+			{"mes":"03", "dia":"08", "sexo":"M", "nome":"BRYAN BUENO DE CARGO"},
+			{"mes":"03", "dia":"08", "sexo":"F", "nome":"THAYNÁ BUENO DE CAMARGO"},
+			{"mes":"03", "dia":"16", "sexo":"F", "nome":"KELLY SANTOS"},
+			{"mes":"03", "dia":"16", "sexo":"F", "nome":"MICHELLI WALTER DOS SANTOS"},
+			{"mes":"03", "dia":"17", "sexo":"F", "nome":"DEUSENIRA SOARES TEIXEIRA"},
+			{"mes":"03", "dia":"18", "sexo":"F", "nome":"Márcia dos Santos Ribeiro Velter"},
+			{"mes":"03", "dia":"19", "sexo":"F", "nome":"ELIZA BARBI"},
+			{"mes":"03", "dia":"19", "sexo":"F", "nome":"ELIANA DE CASTRO SILVA"},
+			{"mes":"03", "dia":"20", "sexo":"F", "nome":"REGINA CÉLIA VANZIN"},
+			{"mes":"03", "dia":"21", "sexo":"M", "nome":"LEONARDO WEBER DA SILVA"},
+			{"mes":"03", "dia":"23", "sexo":"M", "nome":"JOVANE BARBI DA SILVA"},
+			{"mes":"03", "dia":"25", "sexo":"F", "nome":"MUNNIQUE DOS SANTOS PEREIRA"},
+			{"mes":"03", "dia":"26", "sexo":"F", "nome":"MARISTELA MORAES"},
+			{"mes":"03", "dia":"29", "sexo":"F", "nome":"MARIA EDUARDA RODRIGUES DE OLIVEIRA"},
+			{"mes":"03", "dia":"31", "sexo":"F", "nome":"KARENN FREIBERGER DE OLIVEIRA"},
+			{"mes":"04", "dia":"02", "sexo":"F", "nome":"DAIR MARQUES DA SILVA"},
+			{"mes":"04", "dia":"03", "sexo":"M", "nome":"GLAUBER ROBERTO DOS SANTOS"},
+			{"mes":"04", "dia":"06", "sexo":"F", "nome":"LISIENE FEIJO SANT ANNA"},
+			{"mes":"04", "dia":"07", "sexo":"M", "nome":"DEIVIDE CAIQUE MENEZES VIANA"},
+			{"mes":"04", "dia":"08", "sexo":"F", "nome":"FERNANDA HECK PSCHEIDT"},
+			{"mes":"04", "dia":"13", "sexo":"M", "nome":"RODRIGO INÁCIO FERREIRA"},
+			{"mes":"04", "dia":"16", "sexo":"F", "nome":"MARIONICE PSCHEIDT"},
+			{"mes":"04", "dia":"22", "sexo":"F", "nome":"ROSEVALDA CORREIA"},
+			{"mes":"04", "dia":"26", "sexo":"M", "nome":"JORGE ALMEIDA"},
+			{"mes":"04", "dia":"27", "sexo":"M", "nome":"MIGUEL WALTER DOS SANTOS"},
+			{"mes":"04", "dia":"27", "sexo":"M", "nome":"LEONARDO ALEXANDRE SOUSA"},
+			{"mes":"04", "dia":"29", "sexo":"F", "nome":"MARIMEL AZEVEDO ALVES PEREIRA"},
+			{"mes":"04", "dia":"30", "sexo":"F", "nome":"LUIZA BORGES VEIGA"},
+			{"mes":"05", "dia":"01", "sexo":"M", "nome":"FÁBIO DE MOURA ROSA"},
+			{"mes":"05", "dia":"08", "sexo":"M", "nome":"MAICON MARCELO MORAES"},
+			{"mes":"05", "dia":"15", "sexo":"F", "nome":"TANGRIANE PEREIRA TEIXEIRA"},
+			{"mes":"05", "dia":"22", "sexo":"M", "nome":"VALMIR DOS SANTOS"},
+			{"mes":"05", "dia":"23", "sexo":"M", "nome":"PEDRO HENRIQUE DA SILVA BREZEZINSK"},
+			{"mes":"05", "dia":"30", "sexo":"F", "nome":"POLIANA PEREIRA TEIXEIRA"},
+			{"mes":"05", "dia":"30", "sexo":"M", "nome":"DOUGLAS ALEXANDRE SOUSA"},
+			{"mes":"05", "dia":"31", "sexo":"M", "nome":"JORGE LUIZ PEDRO JUNIOR"},
+			{"mes":"06", "dia":"08", "sexo":"F", "nome":"CRISTIANE BONATELLI FELIPE"},
+			{"mes":"06", "dia":"08", "sexo":"M", "nome":"FABIANO SALÉSIO DA SILVA"},
+			{"mes":"06", "dia":"13", "sexo":"F", "nome":"ELIZABETE ELZA DA SILVA EBERLE"},
+			{"mes":"06", "dia":"15", "sexo":"F", "nome":"MARIA ALICE SANTOS"},
+			{"mes":"06", "dia":"18", "sexo":"M", "nome":"JEFF WERLICH GRAH"},
+			{"mes":"06", "dia":"22", "sexo":"F", "nome":"RAFAELA SEEFELD FERREIRA"},
+			{"mes":"06", "dia":"26", "sexo":"M", "nome":"BERNARDO PAIVA COSTA"},
+			{"mes":"06", "dia":"27", "sexo":"M", "nome":"JULIANO ESCOBAR ETGES"},
+			{"mes":"06", "dia":"30", "sexo":"F", "nome":"LUCIANAURA MARIA ALVES TEODÓSIO"},
+			{"mes":"07", "dia":"03", "sexo":"F", "nome":"CRISTINA MARIA MENDES DA SILVA"},
+			{"mes":"07", "dia":"04", "sexo":"M", "nome":"PEDRO DE REZENDE GUCHERT"},
+			{"mes":"07", "dia":"06", "sexo":"F", "nome":"MARILZA VIEIRA AMBROZINI"},
+			{"mes":"07", "dia":"08", "sexo":"F", "nome":"MARCIA MARIA BRUCH"},
+			{"mes":"07", "dia":"11", "sexo":"F", "nome":"GILCIMAR DE SOUZA MIRANDA"},
+			{"mes":"07", "dia":"12", "sexo":"F", "nome":"NATÁLIA DE MEDEIROS BORGES"},
+			{"mes":"07", "dia":"16", "sexo":"F", "nome":"SUE LANA SEEFELD FERREIRA"},
+			{"mes":"07", "dia":"20", "sexo":"F", "nome":"MARCIA REGINA SCHEIDT"},
+			{"mes":"07", "dia":"29", "sexo":"F", "nome":"SUSANA IAHN RICARDO"},
+			{"mes":"08", "dia":"01", "sexo":"F", "nome":"CRISTINA LÚCIA LOBATO HIRAKAWA"},
+			{"mes":"08", "dia":"11", "sexo":"F", "nome":"CAROLINA DA COSTA ESPÍNDOLA ROSA"},
+			{"mes":"08", "dia":"16", "sexo":"M", "nome":"URUBATAN MARQUES HIRAKAWA"},
+			{"mes":"08", "dia":"19", "sexo":"M", "nome":"VINICIUS SOUZA DE CAMARGO"},
+			{"mes":"08", "dia":"20", "sexo":"M", "nome":"RODRIGO BUENO DE CAMARGO"},
+			{"mes":"08", "dia":"28", "sexo":"M", "nome":"MADSON TCHAICK RIBEIRO"},
+			{"mes":"08", "dia":"29", "sexo":"F", "nome":"FABIOLA CRISTINA DA SILVA"},
+			{"mes":"09", "dia":"06", "sexo":"F", "nome":"PRISCILA SOUZA"},
+			{"mes":"09", "dia":"07", "sexo":"F", "nome":"SARAH IAHN RICARDO"},
+			{"mes":"09", "dia":"07", "sexo":"F", "nome":"SANDRA REGINA MAGNUS"},
+			{"mes":"09", "dia":"10", "sexo":"F", "nome":"Maria Jucicleide santana quinto dos santos"},
+			{"mes":"09", "dia":"13", "sexo":"M", "nome":"RODRIGO BONORA DOS SANTOS"},
+			{"mes":"09", "dia":"15", "sexo":"F", "nome":"LIDIA LEDVINA BRUCH"},
+			{"mes":"09", "dia":"20", "sexo":"F", "nome":"MIRELA IZABEL DE SOUZA FEIJÓ"},
+			{"mes":"09", "dia":"23", "sexo":"F", "nome":"ALICE MARTINS DE PAIVA ALVES"},
+			{"mes":"09", "dia":"25", "sexo":"F", "nome":"EDI MARIA MOLIM BASCO"},
+			{"mes":"09", "dia":"25", "sexo":"M", "nome":"LUCIANO DA MOTTA CORREA"},
+			{"mes":"09", "dia":"25", "sexo":"F", "nome":"ADELIR COSTA TCHAICK"},
+			{"mes":"10", "dia":"04", "sexo":"M", "nome":"EDUARDO DE OLIVEIRA"},
+			{"mes":"10", "dia":"07", "sexo":"F", "nome":"LOUISE SOFIA LOBO ABDALA"},
+			{"mes":"10", "dia":"07", "sexo":"F", "nome":"ISABELLA WALTER DOS SANTOS"},
+			{"mes":"10", "dia":"14", "sexo":"F", "nome":"FRANCISCA NOELY PSCHEIDT"},
+			{"mes":"10", "dia":"16", "sexo":"F", "nome":"LIANE CRISTINA ALMEIDA ESCOBAR CORRÊA"},
+			{"mes":"10", "dia":"23", "sexo":"F", "nome":"RUTE FERNANDA RODRIGUES DE OLIVEIRA"},
+			{"mes":"10", "dia":"27", "sexo":"F", "nome":"MARI CRISTINA GABRIEL BARBI"},
+			{"mes":"11", "dia":"02", "sexo":"F", "nome":"NILCE DOS SANTOS FERREIRA"},
+			{"mes":"11", "dia":"03", "sexo":"M", "nome":"DIOGO RODRIGUES FEIJÓ"},
+			{"mes":"11", "dia":"06", "sexo":"M", "nome":"THÉO GUCHERT"},
+			{"mes":"11", "dia":"07", "sexo":"M", "nome":"LUCIANO RODRIGUES VEIGA"},
+			{"mes":"11", "dia":"12", "sexo":"M", "nome":"MARCOS PAULO GUCHERT"},
+			{"mes":"11", "dia":"12", "sexo":"F", "nome":"ANA LUIZA MAGNUS ARAUJO"},
+			{"mes":"11", "dia":"15", "sexo":"M", "nome":"ALIEL COSTA SILVA"},
+			{"mes":"11", "dia":"18", "sexo":"M", "nome":"MAURÍCIO EGÍDIO FELIPE"},
+			{"mes":"11", "dia":"21", "sexo":"M", "nome":"LUCA BORGES VEIGA"},
+			{"mes":"11", "dia":"21", "sexo":"F", "nome":"ALDA DOS ANJOS BARBI"},
+			{"mes":"11", "dia":"22", "sexo":"F", "nome":"DEBORA IAHN RICARDO"},
+			{"mes":"11", "dia":"26", "sexo":"F", "nome":"ALINE ISOLINA DE REZENDE DA SILVA GUCHERT"},
+			{"mes":"12", "dia":"05", "sexo":"F", "nome":"GERUSA GRAZIELA DE MORAES NATUS DE MENEZES"},
+			{"mes":"12", "dia":"08", "sexo":"M", "nome":"LUCAS GUCKERT"},
+			{"mes":"12", "dia":"12", "sexo":"M", "nome":"ESTEVÃO JORGE LOPES GARCIA"},
+			{"mes":"12", "dia":"22", "sexo":"F", "nome":"KARINA LOPES GARCIA"},
+			{"mes":"12", "dia":"24", "sexo":"F", "nome":"NANCY DE LOURDES GRANETO"},
+			{"mes":"12", "dia":"26", "sexo":"F", "nome":"LERIANE DE SOUZA FLORIANO"},
+			{"mes":"12", "dia":"31", "sexo":"M", "nome":"JORGE LUIZ AMADOR GARCIA JUNIOR"},
+		]
+
+		function numberChars(num) {
+			return num.toString().padStart(2, '0')
+		}
+
+		const htmlContent = document.querySelector("#content");
+
+		for (var i = 0; i < meses.length; i++) {
+			htmlContent.insertAdjacentHTML('beforeend', '<div class="monthbox" id="month'+numberChars(i+1).toString()+'"> <div class="month">'+meses[i]+'</div> <div id="daybox'+numberChars(i+1).toString()+'"> </div> </div>');
+		}
+
+		const datahoje = new Date();
+
+		for (var i = 0; i < niver.length; i++) {
+			let mes = niver[i].mes
+			let dia = niver[i].dia
+			let sexo = niver[i].sexo
+			let nome = niver[i].nome
+			let htmlDay = document.querySelector("#daybox"+mes);
+			htmlDay.insertAdjacentHTML('beforeend', '<div class="day" data-name="'+nome.replace(/ .*/,'')+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> </div>');
+			if (dia == datahoje.getDate() && mes == (datahoje.getMonth()+1)) {
+				if (document.getElementById("shareNiverName").innerHTML == "") {
+					document.getElementById("shareNiverName").innerHTML = nome.replace(/ .*/,'');
+				} else {
+					let nomes = document.getElementById("shareNiverName").innerHTML +" e "+ nome.replace(/ .*/,'');
+					document.getElementById("shareNiverName").innerHTML = nomes;
+				}
+				
+			}
+		}
+
+		function shareNiver() {
+			let nome = document.getElementById("shareNiverName").innerHTML;
+			window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *"+nome+"* está completando mais um ano de vida.%0A%0ASegue contato para quem desejar dar os parabéns!");
+		}
+
+		function checkExistNiver() {
+			if (document.getElementById("shareNiverName").innerHTML == "") {
+				document.getElementById("share").style.display = "none";
+			}
+		}
+		checkExistNiver()
+
+	</script>
+
+</body>
+</html>
