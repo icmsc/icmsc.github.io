@@ -56,6 +56,7 @@
 			margin-top: 10px;
 		}
 		.day {
+			position: relative;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -66,6 +67,10 @@
 		}
 		.daynumber {
 			margin-right: 15px;
+		}
+		.dayphoneicon {
+			position: absolute;
+			right: 5px;
 		}
 		.today {
 			background: #B8DB8A;
@@ -128,19 +133,19 @@
 			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ISABELA ESCOBAR CORRÊA", "fone":"48998082718"},
 			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ELIZIANA DA SILVA PEREIRA LENTZ", "fone":"48999120724"},
 			{"mes":"01", "dia":"23", "sexo":"F", "nome":"SONIA REGINA PASSO DE ALMEIDA", "fone":""},
-			{"mes":"01", "dia":"25", "sexo":"F", "nome":"VALDIMARA DOS SANTOS", "fone":""},
-			{"mes":"01", "dia":"27", "sexo":"M", "nome":"DANIEL DOS SANTOS PEREIRA", "fone":""},
+			{"mes":"01", "dia":"25", "sexo":"F", "nome":"VALDIMARA DOS SANTOS", "fone":"48991666885"},
+			{"mes":"01", "dia":"27", "sexo":"M", "nome":"DANIEL DOS SANTOS PEREIRA", "fone":"48991278507"},
 			{"mes":"01", "dia":"31", "sexo":"M", "nome":"RICARDO LENTZ", "fone":"48984076616"},
-			{"mes":"02", "dia":"03", "sexo":"F", "nome":"THAÍS DA SILVA BUENO DE CAMARGO", "fone":""},
+			{"mes":"02", "dia":"03", "sexo":"F", "nome":"THAÍS DA SILVA BUENO DE CAMARGO", "fone":"48991599492"},
 			{"mes":"02", "dia":"03", "sexo":"M", "nome":"ZANDONAITY SOARES TEIXEIRA DE ASSIS", "fone":"48996860801"},
-			{"mes":"02", "dia":"11", "sexo":"F", "nome":"SOFIA LOPES GARCIA", "fone":""},
-			{"mes":"02", "dia":"13", "sexo":"F", "nome":"SOFIA ESPÍNDOLA ROSA", "fone":""},
-			{"mes":"02", "dia":"14", "sexo":"F", "nome":"VITÓRIA ABRAHÃO DA SILVA", "fone":""},
-			{"mes":"02", "dia":"16", "sexo":"M", "nome":"DANIEL BARBI DA SILVA", "fone":""},
-			{"mes":"02", "dia":"20", "sexo":"M", "nome":"EDUARDO SEEFELD FERREIRA", "fone":""},
+			{"mes":"02", "dia":"11", "sexo":"F", "nome":"SOFIA LOPES GARCIA", "fone":"27995832694"},
+			{"mes":"02", "dia":"13", "sexo":"F", "nome":"SOFIA ESPÍNDOLA ROSA", "fone":"48991946705"},
+			{"mes":"02", "dia":"14", "sexo":"F", "nome":"VITÓRIA ABRAHÃO DA SILVA", "fone":"48999515459"},
+			{"mes":"02", "dia":"16", "sexo":"M", "nome":"DANIEL BARBI DA SILVA", "fone":"48999974386"},
+			{"mes":"02", "dia":"20", "sexo":"M", "nome":"EDUARDO SEEFELD FERREIRA", "fone":"48984538971"},
 			{"mes":"03", "dia":"01", "sexo":"F", "nome":"DAIANE KLOPPEL", "fone":""},
 			{"mes":"03", "dia":"02", "sexo":"F", "nome":"ELLEN IMBURGUE WEBER DA SILVA", "fone":""},
-			{"mes":"03", "dia":"05", "sexo":"F", "nome":"LAINARA TEODÓSIO BARBI", "fone":""},
+			{"mes":"03", "dia":"05", "sexo":"F", "nome":"LAINARA TEODÓSIO BARBI", "fone":"48996690181"},
 			{"mes":"03", "dia":"05", "sexo":"M", "nome":"ERICKSEN DOUGLAS PSCHEIDT", "fone":""},
 			{"mes":"03", "dia":"08", "sexo":"M", "nome":"BRYAN BUENO DE CARGO", "fone":""},
 			{"mes":"03", "dia":"08", "sexo":"F", "nome":"THAYNÁ BUENO DE CAMARGO", "fone":""},
@@ -160,10 +165,10 @@
 			{"mes":"04", "dia":"02", "sexo":"F", "nome":"DAIR MARQUES DA SILVA", "fone":""},
 			{"mes":"04", "dia":"03", "sexo":"M", "nome":"GLAUBER ROBERTO DOS SANTOS", "fone":""},
 			{"mes":"04", "dia":"06", "sexo":"F", "nome":"LISIENE FEIJO SANT ANNA", "fone":""},
-			{"mes":"04", "dia":"07", "sexo":"M", "nome":"DEIVIDE CAIQUE MENEZES VIANA", "fone":""},
-			{"mes":"04", "dia":"08", "sexo":"F", "nome":"FERNANDA HECK PSCHEIDT", "fone":""},
-			{"mes":"04", "dia":"13", "sexo":"M", "nome":"RODRIGO INÁCIO FERREIRA", "fone":""},
-			{"mes":"04", "dia":"16", "sexo":"F", "nome":"MARIONICE PSCHEIDT", "fone":""},
+			{"mes":"04", "dia":"07", "sexo":"M", "nome":"DEIVIDE CAIQUE MENEZES VIANA", "fone":"7199933496"},
+			{"mes":"04", "dia":"08", "sexo":"F", "nome":"FERNANDA HECK PSCHEIDT", "fone":"48999161995"},
+			{"mes":"04", "dia":"13", "sexo":"M", "nome":"RODRIGO INÁCIO FERREIRA", "fone":"48984248774"},
+			{"mes":"04", "dia":"16", "sexo":"F", "nome":"MARIONICE PSCHEIDT", "fone":"48996969688"},
 			{"mes":"04", "dia":"22", "sexo":"F", "nome":"ROSEVALDA CORREIA", "fone":""},
 			{"mes":"04", "dia":"26", "sexo":"M", "nome":"JORGE ALMEIDA", "fone":""},
 			{"mes":"04", "dia":"27", "sexo":"M", "nome":"MIGUEL WALTER DOS SANTOS", "fone":""},
@@ -183,7 +188,7 @@
 			{"mes":"06", "dia":"13", "sexo":"F", "nome":"ELIZABETE ELZA DA SILVA EBERLE", "fone":""},
 			{"mes":"06", "dia":"15", "sexo":"F", "nome":"MARIA ALICE SANTOS", "fone":""},
 			{"mes":"06", "dia":"18", "sexo":"M", "nome":"JEFF WERLICH GRAH", "fone":""},
-			{"mes":"06", "dia":"22", "sexo":"F", "nome":"RAFAELA SEEFELD FERREIRA", "fone":""},
+			{"mes":"06", "dia":"22", "sexo":"F", "nome":"RAFAELA SEEFELD FERREIRA", "fone":"48998367154"},
 			{"mes":"06", "dia":"26", "sexo":"M", "nome":"BERNARDO PAIVA COSTA", "fone":""},
 			{"mes":"06", "dia":"27", "sexo":"M", "nome":"JULIANO ESCOBAR ETGES", "fone":""},
 			{"mes":"06", "dia":"30", "sexo":"F", "nome":"LUCIANAURA MARIA ALVES TEODÓSIO", "fone":""},
@@ -262,7 +267,7 @@
 			let fone = niver[i].fone ? niver[i].fone : "";
 			let htmlDay = document.querySelector("#daybox"+mes);
 			if (fone && fone!="") {
-				htmlDay.insertAdjacentHTML('beforeend', '<div class="day" data-name="'+nome.replace(/ .*/,'')+'" data-fone="'+fone+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> </div>');
+				htmlDay.insertAdjacentHTML('beforeend', '<div class="day" data-name="'+nome.replace(/ .*/,'')+'" data-fone="'+fone+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> <div class="dayphoneicon">&#128222;</div> </div>');
 			} else {
 				htmlDay.insertAdjacentHTML('beforeend', '<div class="day" data-name="'+nome.replace(/ .*/,'')+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> </div>');
 			}
