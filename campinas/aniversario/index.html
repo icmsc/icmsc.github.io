@@ -121,13 +121,13 @@
 		const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
 		const niver = [
-			{"mes":"01", "dia":"10", "sexo":"M", "nome":"LORENZO SANTOS", "fone":""},
+			{"mes":"01", "dia":"10", "sexo":"M", "nome":"LORENZO SANTOS", "fone":"48998044074"},
 			{"mes":"01", "dia":"11", "sexo":"M", "nome":"ANDRÉ RICARDO POLICARPO DE SOUZA", "fone":"48999837746"},
 			{"mes":"01", "dia":"17", "sexo":"F", "nome":"SUELI TEREZINHA NAZARIO", "fone":"48999625563"},
 			{"mes":"01", "dia":"20", "sexo":"F", "nome":"DANIELLE ABRAHÃO BARROS DA SILVA", "fone":"48999515459"},
 			{"mes":"01", "dia":"20", "sexo":"F", "nome":"THAIS DIAS", "fone":""},
-			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ISABELA ESCOBAR CORRÊA", "fone":""},
-			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ELIZIANA DA SILVA PEREIRA LENTZ", "fone":""},
+			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ISABELA ESCOBAR CORRÊA", "fone":"48996350133"},
+			{"mes":"01", "dia":"22", "sexo":"F", "nome":"ELIZIANA DA SILVA PEREIRA LENTZ", "fone":"48999120724"},
 			{"mes":"01", "dia":"23", "sexo":"F", "nome":"SONIA REGINA PASSO DE ALMEIDA", "fone":""},
 			{"mes":"01", "dia":"25", "sexo":"F", "nome":"VALDIMARA DOS SANTOS", "fone":""},
 			{"mes":"01", "dia":"27", "sexo":"M", "nome":"DANIEL DOS SANTOS PEREIRA", "fone":""},
@@ -274,7 +274,8 @@
 				} else {
 					let nomes = document.getElementById("shareNiverName").innerHTML +" e "+ nome.replace(/ .*/,'');
 					document.getElementById("shareNiverName").innerHTML = nomes;
-					document.getElementById("sharenumber").innerHTML = "";
+					let numeros = document.getElementById("sharenumber").innerHTML +" e "+ fone.replace(/ .*/,'');
+					document.getElementById("sharenumber").innerHTML = numeros;
 				}
 				
 			}
@@ -283,10 +284,25 @@
 		function shareNiver() {
 			let nome = document.getElementById("shareNiverName").innerHTML;
 			let fone = document.getElementById("sharenumber").innerHTML;
-			if (fone != "") {
-				window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *"+nome+"* está completando mais um ano de vida.%0A%0AClique abaixo para dar os parabéns!%0Ahttps%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%2B55"+fone);
+			let nomes = nome.split(" e ");
+			let fones = fone.split(" e ");
+			if (nomes.length == 1) {
+				if (fone != "") {
+					window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *"+nome+"* está completando mais um ano de vida.%0A%0AClique abaixo para dar os parabéns!%0Ahttps%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%2B55"+fone);
+				} else {
+					window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *"+nome+"* está completando mais um ano de vida.%0A%0ASegue contato para quem desejar dar os parabéns!");
+				}
 			} else {
-				window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *"+nome+"* está completando mais um ano de vida.%0A%0ASegue contato para quem desejar dar os parabéns!");
+				let msgNiver = "https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0A*Hoje temos "+nomes.length+" aniversariantes!*%0A%0A%0A";
+				for (var i = 0; i < nomes.length; i++) {
+					if (fones[i] != "") {
+						msgNiver += "Nosso(a) irmão(ã) *"+nomes[i]+"* está completando mais um ano de vida.%0AClique abaixo para dar os parabéns!%0Ahttps%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%2B55"+fones[i];
+					} else {
+						msgNiver += "Nosso(a) irmão(ã) *"+nomes[i]+"* está completando mais um ano de vida.%0ASegue contato para quem desejar dar os parabéns!";
+					}
+					if (i < nomes.length-1) { msgNiver += "%0A%0A%0A"; }
+				}
+				window.open(msgNiver);
 			}
 		}
 
