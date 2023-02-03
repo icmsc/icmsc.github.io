@@ -148,7 +148,7 @@
 			{"mes":"03", "dia":"02", "sexo":"F", "nome":"ELLEN IMBURGUE WEBER DA SILVA", "fone":""},
 			{"mes":"03", "dia":"05", "sexo":"F", "nome":"LAINARA TEODÓSIO BARBI", "fone":"48996690181"},
 			{"mes":"03", "dia":"05", "sexo":"M", "nome":"ERICKSEN DOUGLAS PSCHEIDT", "fone":""},
-			{"mes":"03", "dia":"08", "sexo":"M", "nome":"BRYAN BUENO DE CARGO", "fone":""},
+			{"mes":"03", "dia":"08", "sexo":"M", "nome":"BRYAN BUENO DE CAMARGO", "fone":""},
 			{"mes":"03", "dia":"08", "sexo":"F", "nome":"THAYNÁ BUENO DE CAMARGO", "fone":""},
 			{"mes":"03", "dia":"16", "sexo":"F", "nome":"KELLY SANTOS", "fone":""},
 			{"mes":"03", "dia":"16", "sexo":"F", "nome":"MICHELLI WALTER DOS SANTOS", "fone":""},
@@ -261,16 +261,22 @@
 		const datahoje = new Date();
 
 		for (var i = 0; i < niver.length; i++) {
-			let mes = niver[i].mes
-			let dia = niver[i].dia
-			let sexo = niver[i].sexo
-			let nome = niver[i].nome
+			let mes = niver[i].mes;
+			let dia = niver[i].dia;
+			let sexo = niver[i].sexo;
+			let nome = niver[i].nome;
 			let fone = niver[i].fone ? niver[i].fone : "";
+			let diaAnalise = niver[i].dia;
+			if (niver[i].dia[0] == "0") { diaAnalise = niver[i].dia.slice(1); }
+			let mesAnalise = niver[i].mes;
+			if (niver[i].mes[0] == "0") { mesAnalise = niver[i].mes.slice(1); }
+			let todayClass = "";
+			if (diaAnalise == datahoje.getDate() && mesAnalise == datahoje.getMonth()+1) { todayClass = "today"; }
 			let htmlDay = document.querySelector("#daybox"+mes);
 			if (fone && fone!="") {
-				htmlDay.insertAdjacentHTML('beforeend', '<div class="day" data-name="'+nome.replace(/ .*/,'')+'" data-fone="'+fone+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> <div class="dayphoneicon">&#128222;</div> </div>');
+				htmlDay.insertAdjacentHTML('beforeend', '<div class="day '+todayClass+'" data-name="'+nome.replace(/ .*/,'')+'" data-fone="'+fone+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> <div class="dayphoneicon">&#128222;</div> </div>');
 			} else {
-				htmlDay.insertAdjacentHTML('beforeend', '<div class="day" data-name="'+nome.replace(/ .*/,'')+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> </div>');
+				htmlDay.insertAdjacentHTML('beforeend', '<div class="day '+todayClass+'" data-name="'+nome.replace(/ .*/,'')+'"> <div class="daynumber">'+dia+'/'+mes+'</div> <div class="dayname">'+nome.toUpperCase()+'</div> </div>');
 			}
 			if (dia == datahoje.getDate() && mes == (datahoje.getMonth()+1)) {
 				if (document.getElementById("shareNiverName").innerHTML == "") {
