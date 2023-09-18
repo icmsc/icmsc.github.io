@@ -95,6 +95,20 @@
 
 	<script type="text/javascript">
 
+		function mesAtualMenorQue(mesString) {
+			const dataAtual = new Date();
+			const partes = mesString.split('/');
+			const anoFornecido = parseInt(partes[0], 10);
+			const mesFornecido = parseInt(partes[1], 10);
+			const anoAtual = dataAtual.getFullYear();
+			const mesAtual = dataAtual.getMonth() + 1;
+			if (anoFornecido < anoAtual || (anoFornecido === anoAtual && mesFornecido < mesAtual)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
 		// arrays
 		const semana = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
 		const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
@@ -122,7 +136,7 @@
 
 		let mesesquantidade = 3;
 		if (parseInt(window.location.href.split("?m=")[1]) > 0) {
-			mesesquantidade = parseInt(window.location.href.split("?m=")[1])
+			mesesquantidade = parseInt(window.location.href.split("?m=")[1]);
 		}
 		function monthReturn(mes) {
 			let numero = mes;
@@ -148,40 +162,46 @@
 			
 			// mês atual verificado
 			var mesatual = datacalculada.getMonth();
-			
-			// verifica se é um dia de culto
-			if (diaspermitidos.includes(datacalculada.getDay())) {
+			var anoatual = datacalculada.getFullYear();
 
-				// verifica se mudou o mês
-				if (mescalculado != mesatual && mesesexibicao.includes(mesatual)) {
-					mescalculado = mesatual;
-					element.insertAdjacentHTML('beforeend', '<div class="month">'+meses[mescalculado]+' '+datacalculada.getFullYear()+'</div>');
-				}
+			// verifica se o mês é menor que o mês atual, se for, não mostra
+			if (!mesAtualMenorQue(anoatual+"/"+(mesatual+1))) {
 
-				// formata datas para verificação
-				let dataCalculoCalculada = new Date(datacalculada.getFullYear()+'/'+(datacalculada.getMonth()+1)+'/'+datacalculada.getDate());
-				let dataCalculoHoje = new Date(datahoje.getFullYear()+'/'+(datahoje.getMonth()+1)+'/'+datahoje.getDate());
-				let dataCalculoAmanha = new Date(diaamanha.getFullYear()+'/'+(diaamanha.getMonth()+1)+'/'+diaamanha.getDate());
+				// verifica se é um dia de culto
+				if (diaspermitidos.includes(datacalculada.getDay())) {
 
-				// verfica se está no intervalo de datas a serem mostradas
-				if (mesesexibicao.includes(mesatual)) {
-					// verifica classe de data
-					let classeAdd = "";
-					if (dataCalculoCalculada.getTime() == dataCalculoHoje.getTime()) {
-						classeAdd = "today";
+					// verifica se mudou o mês
+					if (mescalculado != mesatual && mesesexibicao.includes(mesatual)) {
+						mescalculado = mesatual;
+						element.insertAdjacentHTML('beforeend', '<div class="month">'+meses[mescalculado]+' '+datacalculada.getFullYear()+'</div>');
 					}
-					if (dataCalculoCalculada.getTime() == dataCalculoAmanha.getTime()) {
-						classeAdd = "tomorrow";
-					}
-					// adiciona o dia e grupo
-					element.insertAdjacentHTML('beforeend', '<div class="days '+classeAdd+'"> <div class="daysitem daynumber">'+('0'+datacalculada.getDate()).slice(-2)+'/'+('0'+(datacalculada.getMonth()+1)).slice(-2)+' - '+semana[datacalculada.getDay()]+'</div> <div class="daysitem daygroup">G'+grupocalculado+' - '+grupos[grupocalculado-1]+'</div> </div>');
-				}
 
-				// verifica e altera o grupo do dia
-				if (grupocalculado == grupos.length) {
-					grupocalculado = 1;
-				} else {
-					grupocalculado += 1;
+					// formata datas para verificação
+					let dataCalculoCalculada = new Date(datacalculada.getFullYear()+'/'+(datacalculada.getMonth()+1)+'/'+datacalculada.getDate());
+					let dataCalculoHoje = new Date(datahoje.getFullYear()+'/'+(datahoje.getMonth()+1)+'/'+datahoje.getDate());
+					let dataCalculoAmanha = new Date(diaamanha.getFullYear()+'/'+(diaamanha.getMonth()+1)+'/'+diaamanha.getDate());
+
+					// verfica se está no intervalo de datas a serem mostradas
+					if (mesesexibicao.includes(mesatual)) {
+						// verifica classe de data
+						let classeAdd = "";
+						if (dataCalculoCalculada.getTime() == dataCalculoHoje.getTime()) {
+							classeAdd = "today";
+						}
+						if (dataCalculoCalculada.getTime() == dataCalculoAmanha.getTime()) {
+							classeAdd = "tomorrow";
+						}
+						// adiciona o dia e grupo
+						element.insertAdjacentHTML('beforeend', '<div class="days '+classeAdd+'"> <div class="daysitem daynumber">'+('0'+datacalculada.getDate()).slice(-2)+'/'+('0'+(datacalculada.getMonth()+1)).slice(-2)+' - '+semana[datacalculada.getDay()]+'</div> <div class="daysitem daygroup">G'+grupocalculado+' - '+grupos[grupocalculado-1]+'</div> </div>');
+					}
+
+					// verifica e altera o grupo do dia
+					if (grupocalculado == grupos.length) {
+						grupocalculado = 1;
+					} else {
+						grupocalculado += 1;
+					}
+
 				}
 
 			}
