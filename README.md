@@ -1,5 +1,6 @@
-## icmsc.github.io
+# ICM SC
 
-# Repositório ICM
+Repositório para informações de igrejas locais da Igreja Cristã Maranata em Santa Catarina
 
-## Grupos de assistência
+- Bíblia online: https://icmsc.github.io/biblia
+- Igrejas: https://icmsc.github.io
