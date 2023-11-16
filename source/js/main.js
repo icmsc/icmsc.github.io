@@ -1,5 +1,5 @@
-import { app } from './general.js?v=32PBG3617';
-import { hash } from './hash.js?v=32PBG3617';
+import { app } from './general.js?v=00GDS8060';
+import { hash } from './hash.js?v=00GDS8060';
 
 $(document).ready(()=>{
 
