@@ -34,7 +34,7 @@ export function app() {
 			if (element.view == 1) {
 				renderLinksSocialLoadSVG(prefixer+element.icon)
 				.then(function(svgContent) {
-					$("#social").append(`<a class="social-item" target="_blank" href="${prefixer+element.link}" title="${element.name}">${svgContent}</a>`);
+					$("#social").append(`<a class="social-item" target="_blank" href="${element.link}" title="${element.name}">${svgContent}</a>`);
 				});
 			}
 		});
