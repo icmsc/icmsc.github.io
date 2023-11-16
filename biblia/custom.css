@@ -1,0 +1,69 @@
+main {
+	padding: 0px;
+}
+
+main #title {
+	text-align: center;
+	font-weight: bold;
+	background: #D61E25;
+	color: #FFFFFF;
+	height: 60px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+main svg {
+	height: 30px;
+	fill: #FFFFFF;
+}
+
+main #seletores {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: #e6e6e6;
+	padding: 0px 50px;
+}
+main #bi_capitulos {
+	display: flex;
+	flex: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 10px auto;
+}
+
+main #conteudo {
+	padding: 10px 50px 50px 50px;
+}
+main #bi_livrocapitulo {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px 0px;
+}
+main .bi_versiculo {
+	margin: 4px 0px;
+	text-align: justify;
+}
+main .bi_versiculo_numero {
+	color: #D61E25;
+	font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+main #seletores {
+	padding: 0px 10px;
+}
+
+main #conteudo {
+	padding: 10px;
+}
+
+
+}
