@@ -1,0 +1,70 @@
+
+main {
+	background: #FFFFFF;
+	padding: 10px;
+}
+
+#title {
+	text-align: center;
+	font-weight: bold;
+	background: #D61E25;
+	color: #FFFFFF;
+	height: 60px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.month {
+	font-weight: bold;
+	background: tomato;
+	color: #FFFFFF;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+.day {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: #E6E6E6;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 5px;
+}
+.daynumber {
+	margin-right: 15px;
+}
+.dayphoneicon {
+	position: absolute;
+	right: 5px;
+}
+.today {
+	background: #B8DB8A;
+}
+.tomorrow {
+	background: #FFCFC7;
+}
+
+#share {
+	background: #25D366;
+	color: #FFFFFF;
+	font-weight: bold;
+	width: 80%;
+	min-width: 240px;
+	margin: 10px auto 0px auto;
+	border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+}
+#shareaction {
+	margin-top: 10px;
+}

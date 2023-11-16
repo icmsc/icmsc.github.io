@@ -4,20 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="https://icmsc.github.io/img/social.png">
+	<meta property="og:image" content="https://icmsc.github.io/img/share.png">
 	<title>ICM SC</title>
-	<link rel="icon" href="https://icmsc.github.io/source/icon.png">
+	<link rel="icon" href="https://icmsc.github.io/source/images/icon.png">
 	<!-- CSS -->
-	<link rel="stylesheet" href="../source/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../source/css/main.css">
 	<!-- JS -->
-	<script src="../assets/jquery-3.7.1.min.js" defer></script>
-	<script type="module" src="../source/js/main.js" defer></script>
+	<script src="../../assets/jquery-3.7.1.min.js" defer></script>
+	<script type="module" src="../../source/js/main.js" defer></script>
 
-	<!-- Estilos -->
-	<link rel="stylesheet" href="custom.css?v=32PBG3617">
-	<!-- JavaScript -->
-	<script src="acf.js" defer></script>
-	<script src="script.js?v=32PBG3617" defer></script>
+	<!-- Estilo -->
+	<link rel="stylesheet" type="text/css" href="custom.css?v=32PBG3617">
 </head>
 <body>
 
@@ -64,98 +61,19 @@
 
 	<main>
 
-		<section id="seletores">
-
-			<div style="display: flex;flex-direction: row;justify-content: center;align-items: center;gap: 5px;">
-				
-				<select id="bi_livros">
-					<option value="gn">Gênesis</option>
-					<option value="ex">Êxodo</option>
-					<option value="lv">Levítico</option>
-					<option value="nm">Números</option>
-					<option value="dt">Deuteronômio</option>
-					<option value="js">Josué</option>
-					<option value="jz">Juízes</option>
-					<option value="rt">Rute</option>
-					<option value="1sm">1 Samuel</option>
-					<option value="2sm">2 Samuel</option>
-					<option value="1rs">1 Reis</option>
-					<option value="2rs">2 Reis</option>
-					<option value="1cr">1 Crônicas</option>
-					<option value="2cr">2 Crônicas</option>
-					<option value="ed">Esdras</option>
-					<option value="ne">Neemias</option>
-					<option value="et">Ester</option>
-					<option value="jó">Jó</option>
-					<option value="sl">Salmos</option>
-					<option value="pv">Provérbios</option>
-					<option value="ec">Eclesiastes</option>
-					<option value="ct">Cânticos</option>
-					<option value="is">Isaías</option>
-					<option value="jr">Jeremias</option>
-					<option value="lm">Lamentações de Jeremias</option>
-					<option value="ez">Ezequiel</option>
-					<option value="dn">Daniel</option>
-					<option value="os">Oséias</option>
-					<option value="jl">Joel</option>
-					<option value="am">Amós</option>
-					<option value="ob">Obadias</option>
-					<option value="jn">Jonas</option>
-					<option value="mq">Miquéias</option>
-					<option value="na">Naum</option>
-					<option value="hc">Habacuque</option>
-					<option value="sf">Sofonias</option>
-					<option value="ag">Ageu</option>
-					<option value="zc">Zacarias</option>
-					<option value="ml">Malaquias</option>
-					<option value="mt">Mateus</option>
-					<option value="mc">Marcos</option>
-					<option value="lc">Lucas</option>
-					<option value="jo">João</option>
-					<option value="atos">Atos</option>
-					<option value="rm">Romanos</option>
-					<option value="1co">1 Coríntios</option>
-					<option value="2co">2 Coríntios</option>
-					<option value="gl">Gálatas</option>
-					<option value="ef">Efésios</option>
-					<option value="fp">Filipenses</option>
-					<option value="cl">Colossenses</option>
-					<option value="1ts">1 Tessalonicenses</option>
-					<option value="2ts">2 Tessalonicenses</option>
-					<option value="1tm">1 Timóteo</option>
-					<option value="2tm">2 Timóteo</option>
-					<option value="tt">Tito</option>
-					<option value="fm">Filemom</option>
-					<option value="hb">Hebreus</option>
-					<option value="tg">Tiago</option>
-					<option value="1pe">1 Pedro</option>
-					<option value="2pe">2 Pedro</option>
-					<option value="1jo">1 João</option>
-					<option value="2jo">2 João</option>
-					<option value="3jo">3 João</option>
-					<option value="jd">Judas</option>
-					<option value="ap">Apocalipse</option>
-				</select>
-
-				<select id="bi_capitulos">
-				</select>
-				
-			</div>
-
-			<div>Versão ACF</div>
-
+		<section id="share" onclick="shareNiver()" style="cursor: pointer;">
+			<div id="sharenames">Hoje é aniversário de <span id="shareNiverName"></span>!</div>
+			<div id="shareaction">Compartilhar no WhatsApp</div>
+			<div id="sharenumber" style="display: none;"></div>
 		</section>
 
-
-		<section id="conteudo">
-
-			<div id="bi_livrocapitulo"></div>
-			<div id="bi_capitulo_texto"></div>
-
+		<section id="content">
 		</section>
-
 
 	</main>
+
+	<script src="names.js?v=32PBG3617"></script>
+	<script src="script.js?v=32PBG3617"></script>
 
 </body>
 </html>
