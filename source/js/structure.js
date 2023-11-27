@@ -75,7 +75,7 @@ export const structure = {
 				{
 					"link": "oracao",
 					"name": "Oração 24h Trombetas e Festas III",
-					"view": 1,
+					"view": 0,
 				},
 			]
 		},
