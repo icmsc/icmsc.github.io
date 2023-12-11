@@ -144,7 +144,7 @@ const names = [
 	{"mes":"11", "dia":"22", "nome":"DEBORA IAHN RICARDO", "fone":"48996628848"},
 	{"mes":"11", "dia":"26", "nome":"ALINE ISOLINA DE REZENDE DA SILVA GUCHERT", "fone":"48999854451"},
 
-	{"mes":"12", "dia":"05", "nome":"GERUSA GRAZIELA DE MORAES NATUS DE MENEZES", "fone":""},
+	{"mes":"12", "dia":"05", "nome":"GERUSA GRAZIELA DE MORAES NATUS DE MENEZES", "fone":"48991971280"},
 	{"mes":"12", "dia":"08", "nome":"LUCAS GUCKERT", "fone":"48991638181"},
 	{"mes":"12", "dia":"12", "nome":"ESTEVÃO JORGE LOPES GARCIA", "fone":"27995832694"},
 	{"mes":"12", "dia":"20", "nome":"JOSE RICARDO TEIXEIRA DA ROSA", "fone":"48998436192"},
