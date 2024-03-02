@@ -178,9 +178,38 @@ $html .= "Aniversariantes de Campinas";
 $html .= "<br><br>";
 $html .= $hoje_data;
 $html .= "<br><br>";
+if (count($aniversarios) > 0) {
+    $html .= "<strong>Hoje é aniversário de:</strong>";
+    $html .= "<br><br>";
+    for ($k=0; $k < count($aniversarios); $k++) { 
+        $html .= $aniversarios[$k][2];
+        $html .= "<br>";
+    }
+    $html .= "<br><br><br>";
+    // gerar o link
+    if (count($aniversarios) == 1) {
+        if ($aniversarios[0][3] != "") {
+            $msgNiver .= "https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *".$aniversarios[0][4]."* está completando mais um ano de vida.%0A%0AClique abaixo para dar os parabéns!%0Ahttps%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%2B55".$aniversarios[0][3];
+        } else {
+            $msgNiver .= "https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *".$aniversarios[0][4]."* está completando mais um ano de vida.%0A%0ASegue contato para quem desejar dar os parabéns!";
+        }
+        $html .= "<a target='_blank' style='background: #25D366; color: #FFFFFF; font-weight: bold; width: 80%; min-width: 240px; margin: 10px auto 0px auto; border-radius: 5px; padding: 15px; text-align: center; text-decoration: none;' href='".$msgNiver."'>Enviar via WhatsApp</a>";
+    } else {
+        $msgNiver = "https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0A*Hoje temos " . count($aniversarios) . " aniversariantes!*%0A%0A%0A";
+        for ($i = 0; $i < count($aniversarios); $i++) {
+            if ($aniversarios[$i][3] != "") {
+                $msgNiver .= "Nosso(a) irmão(ã) *".$aniversarios[$i][4]."* está completando mais um ano de vida.%0AClique abaixo para dar os parabéns!%0Ahttps%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%2B55".$aniversarios[$i][3];
+            } else {
+                $msgNiver .= "Nosso(a) irmão(ã) *".$aniversarios[$i][4]."* está completando mais um ano de vida.%0ASegue contato para quem desejar dar os parabéns!";
+            }
+            if ($i < count($aniversarios) - 1) {
+                $msgNiver .= "%0A%0A%0A";
+            }
+        }
+        $html .= "<a target='_blank' style='background: #25D366; color: #FFFFFF; font-weight: bold; width: 80%; min-width: 240px; margin: 10px auto 0px auto; border-radius: 5px; padding: 15px; text-align: center; text-decoration: none;' href='".$msgNiver."'>Enviar via WhatsApp</a>";
+    }
+} else {
+    $html .= "<strong>Hoje não tem aniversariantes!</strong>";
+}
 
-$html .= "<a target='_blank' style='background: #25D366; color: #FFFFFF; font-weight: bold; width: 80%; min-width: 240px; margin: 10px auto 0px auto; border-radius: 5px; padding: 15px; text-align: center; text-decoration: none;' href='https://db.eng.br/icm/birth.php'>Enviar via WhatsApp</a>";
-
-require_once 'sender.php';
-senderMail(true,"Aniversariantes de Campinas - ".$hoje_data,$html);
-
+echo $html;
