@@ -22,7 +22,7 @@ function senderMail($destino,$assunto,$conteudo,$origemEmail='compito.ga@gmail.c
 	$mail->SMTPSecure = "tls";
 	$mail->SMTPAuth = true;
 	$mail->Username = 'compito.ga@gmail.com';
-	$mail->Password = 'jtnobzrwojlbrmhe';
+	$mail->Password = 'SENHA';
 	$mail->Port = 587;
 
 	$mail->setFrom($origemEmail,$origemNome);
