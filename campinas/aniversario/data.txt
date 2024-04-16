@@ -1,0 +1,8 @@
+B - bebê
+C - criança
+I - intermediário
+A - adolescente
+J - jovem
+T - adulto
+D - diácono
+P - pastor
