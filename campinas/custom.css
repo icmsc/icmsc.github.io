@@ -10,6 +10,47 @@
 }
 
 
+#banner {
+	background: #FFFFFF;
+	width: 90%;
+	max-width: 1260px;
+	min-width: 200px;
+	margin: 10px auto;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.banner_item {
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	background-color: #F3F3F3;
+	border-radius: 10px;
+	padding: 5px;
+}
+.banner_title {
+	width: 280px;
+	height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.banner_image {
+	width: 280px;
+	border-radius: 10px;
+}
+
+
 @media screen and (max-width: 768px) {
 
 
@@ -17,6 +58,16 @@ main {
 	padding: 0 10px;
 }
 #igreja {
+	width: 100%;
+}
+
+#banner {
+	width: 100%;
+}
+.banner_title {
+	width: 100%;
+}
+.banner_image {
 	width: 100%;
 }
 
