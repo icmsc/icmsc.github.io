@@ -7,4 +7,9 @@ $(document).ready(()=>{
 
 	hash();
 
+	$(".banner_image").click(function(){
+		window.location.assign($(this).attr("src"));
+	});
+
 });
+
