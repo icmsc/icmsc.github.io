@@ -18,6 +18,11 @@ main {
 	border-radius: 5px;
 }
 
+#group {
+	max-width: 580px;
+	margin: auto;
+}
+
 .month {
 	font-weight: bold;
 	background: tomato;

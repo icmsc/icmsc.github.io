@@ -18,6 +18,11 @@ main {
 	border-radius: 5px;
 }
 
+#content {
+	max-width: 580px;
+	margin: auto;
+}
+
 .month {
 	font-weight: bold;
 	background: tomato;
@@ -60,6 +65,7 @@ main {
 	font-weight: bold;
 	width: 80%;
 	min-width: 240px;
+	max-width: 580px;
 	margin: 10px auto 0px auto;
 	border-radius: 5px;
 	padding: 15px;
