@@ -92,9 +92,9 @@ function shareNiver() {
 	let descricoes = descricao.split(" e ");
 	if (nomes.length == 1) {
 		if (fone != "") {
-			window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0A*Hoje temos 1 aniversariante!*%0A%0A%0A"+getCategory(descricao)+" *"+nome+"* está completando mais um ano de vida.%0A%0AClique abaixo para dar os parabéns!%0Ahttps%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%2B55"+fone);
+			window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0A*Hoje temos 1 aniversariante!*%0A%0A"+getCategory(descricao)+" *"+nome+"* está completando mais um ano de vida.%0A%0AClique abaixo para dar os parabéns!%0Ahttps%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%2B55"+fone);
 		} else {
-			window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0AHoje nosso(a) irmão(ã) *"+nome+"* está completando mais um ano de vida.%0A%0ASegue contato para quem desejar dar os parabéns!");
+			window.open("https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0A*Hoje temos 1 aniversariante!*%0A%0A"+getCategory(descricao)+" *"+nome+"* está completando mais um ano de vida.%0A%0AClique abaixo para dar os parabéns!");
 		}
 	} else {
 		let msgNiver = "https://api.whatsapp.com/send?text=A Paz do Senhor Jesus, irmãos!%0A%0A*Hoje temos "+nomes.length+" aniversariantes!*%0A%0A%0A";
