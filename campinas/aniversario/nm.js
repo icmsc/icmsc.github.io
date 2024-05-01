@@ -55,6 +55,7 @@ const names = [
 	{"mes":"04", "dia":"30", "sexo":"F", "classe":"A", "nome":"LUIZA BORGES VEIGA", "fone":"48988049762"},
 
 	{"mes":"05", "dia":"01", "sexo":"M", "classe":"T", "nome":"FÁBIO DE MOURA ROSA", "fone":"48991338324"},
+	{"mes":"05", "dia":"01", "sexo":"M", "classe":"T", "nome":"JUNIO", "fone":"48984467768"},
 	{"mes":"05", "dia":"06", "sexo":"M", "classe":"T", "nome":"JOAO VIEIRA AMBROZINI", "fone":"48984331636"},
 	{"mes":"05", "dia":"08", "sexo":"M", "classe":"T", "nome":"MAICON MARCELO MORAES", "fone":"48984581351"},
 	{"mes":"05", "dia":"15", "sexo":"F", "classe":"T", "nome":"TANGRIANE PEREIRA TEIXEIRA MORAES", "fone":"48984496290"},
