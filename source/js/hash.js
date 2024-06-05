@@ -1,5 +1,5 @@
-import { prefixer } from './common.js';
-import { structure } from './structure.js';
+import { prefixer } from './common.js?v=270bbe9527a39e577f420809f9329c83';
+import { structure } from './structure.js?v=270bbe9527a39e577f420809f9329c83';
 const linksPages = structure.general;
 const linksChurchs = structure.churchs;
 
