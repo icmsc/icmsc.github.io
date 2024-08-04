@@ -131,7 +131,7 @@ const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Ag
 
 const dataBase = new Date(2023, 11, 31);
 		const dataBaseString = "01/08/2023";
-		const grupoBase = 4;
+		const grupoBase = 2;
 		const diasDaSemana = [0, 1, 2, 3, 4, 6];
 		const grupos = ["G1 - Eduardo", "G2 - Jovane", "G3 - Rodrigo", "G4 - Aliel", "G5 - Ricardo"];
 
