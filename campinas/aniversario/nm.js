@@ -100,7 +100,7 @@ const names = [
 	{"mes":"08", "dia":"11", "sexo":"F", "classe":"T", "nome":"SERLE MARIA ROCHA DE MEDEIROS", "fone":"48996111480"},
 	{"mes":"08", "dia":"15", "sexo":"F", "classe":"J", "nome":"ANITA NATUS FRANCO", "fone":"48991578966"},
 	{"mes":"08", "dia":"17", "sexo":"F", "classe":"T", "nome":"MYRIAM AMBROZINI LEAL", "fone":"48984306322"},
-	{"mes":"08", "dia":"19", "sexo":"M", "classe":"T", "nome":"VINICIUS SOUZA DE CAMARGO", "fone":""},
+	{"mes":"08", "dia":"19", "sexo":"M", "classe":"T", "nome":"VINICIUS SOUZA DE CAMARGO", "fone":"48992077615"},
 	{"mes":"08", "dia":"20", "sexo":"M", "classe":"T", "nome":"ELISEU DE OLIVEIRA RODRIGUES", "fone":"48984411032"},
 	{"mes":"08", "dia":"20", "sexo":"M", "classe":"T", "nome":"RODRIGO BUENO DE CAMARGO", "fone":"48996351831"},
 	{"mes":"08", "dia":"28", "sexo":"M", "classe":"T", "nome":"MADSON TCHAICK RIBEIRO", "fone":"48996373912"},
