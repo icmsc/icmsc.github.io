@@ -36,7 +36,6 @@ const names = [
 	{"mes":"03", "dia":"25", "sexo":"F", "classe":"T", "nome":"MUNNIQUE DOS SANTOS PEREIRA", "fone":"48991278507"},
 	{"mes":"03", "dia":"25", "sexo":"F", "classe":"T", "nome":"MARISTELA MORAES", "fone":"48998248132"},
 	{"mes":"03", "dia":"26", "sexo":"M", "classe":"T", "nome":"GILSON MORAES", "fone":"48996036370"},
-	{"mes":"03", "dia":"29", "sexo":"F", "classe":"J", "nome":"MARIA EDUARDA RODRIGUES DE OLIVEIRA", "fone":"48998127257"},
 
 	{"mes":"04", "dia":"01", "sexo":"M", "classe":"D", "nome":"EDUARDO APARECIDO DE PAULA SOUZA", "fone":"48988308882"},
 	{"mes":"04", "dia":"07", "sexo":"M", "classe":"J", "nome":"DEIVIDE CAIQUE MENEZES VIANA", "fone":"7199933496"},
@@ -124,7 +123,6 @@ const names = [
 	{"mes":"10", "dia":"12", "sexo":"F", "classe":"T", "nome":"JACQUELINE LOPES DE OLIVEIRA SOUZA", "fone":"48988690880"},
 	{"mes":"10", "dia":"14", "sexo":"F", "classe":"T", "nome":"FRANCISCA NOELY PSCHEIDT", "fone":"41997078855"},
 	{"mes":"10", "dia":"16", "sexo":"F", "classe":"T", "nome":"LIANE CRISTINA ALMEIDA ESCOBAR CORRÊA", "fone":"48996350133"},
-	{"mes":"10", "dia":"23", "sexo":"F", "classe":"T", "nome":"RUTE FERNANDA RODRIGUES DE OLIVEIRA", "fone":"48988051323"},
 	{"mes":"10", "dia":"27", "sexo":"F", "classe":"T", "nome":"MARI CRISTIANE GABRIEL BARBI", "fone":"48996965730"},
 
 	{"mes":"11", "dia":"02", "sexo":"F", "classe":"T", "nome":"NILCE DOS SANTOS FERREIRA", "fone":"48998179231"},
