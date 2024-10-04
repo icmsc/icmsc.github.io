@@ -14,10 +14,12 @@
 	<script type="module" src="../source/js/main.js" defer></script>
 
 	<!-- Estilos -->
-	<link rel="stylesheet" href="custom.css?v=00GDS8060">
+	<link rel="stylesheet" href="custom.css?v=08289e65244b41a5b4562297cedf13b6">
 	<!-- JavaScript -->
-	<script src="acf.js?v=03162aee797b95d4d40c5a06164a5bde" defer></script>
-	<script src="script.js?v=00GDS8060" defer></script>
+	<script src="acf.js?v=08289e65244b41a5b4562297cedf13b6" defer></script>
+	<script src="aa.js?v=08289e65244b41a5b4562297cedf13b6" defer></script>
+	<script src="nvi.js?v=08289e65244b41a5b4562297cedf13b6" defer></script>
+	<script src="script.js?v=08289e65244b41a5b4562297cedf13b6" defer></script>
 </head>
 <body>
 
@@ -65,9 +67,12 @@
 	<main>
 
 		<section id="seletores">
-
-			<div style="display: flex;flex-direction: row;justify-content: center;align-items: center;gap: 5px;">
-				
+			<select id="bi_versoes">
+				<option value="acf">Almeida Corrigida e Fiel (ACF)</option>
+				<option value="aa">Almeida Revisada Imprensa Bíblica (AA)</option>
+				<option value="nvi">Nova Versão Internacional (NVI)</option>
+			</select>
+			<div id="seletoresbox">
 				<select id="bi_livros">
 					<option value="gn">Gênesis</option>
 					<option value="ex">Êxodo</option>
@@ -136,24 +141,15 @@
 					<option value="jd">Judas</option>
 					<option value="ap">Apocalipse</option>
 				</select>
-
 				<select id="bi_capitulos">
 				</select>
-				
 			</div>
-
-			<div>Versão ACF</div>
-
 		</section>
-
 
 		<section id="conteudo">
-
 			<div id="bi_livrocapitulo"></div>
 			<div id="bi_capitulo_texto"></div>
-
 		</section>
-
 
 	</main>
 

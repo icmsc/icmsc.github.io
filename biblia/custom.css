@@ -1,3 +1,10 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
 main {
 	padding: 0px;
 }
@@ -22,31 +29,46 @@ main svg {
 main #seletores {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: initial;
 	align-items: center;
+	gap: 5px;
 	background: #e6e6e6;
-	padding: 0px 50px;
+	padding: 15px 50px;
 }
+main #seletoresbox {
+	display: flex;
+	flex-direction: row;
+	justify-content: initial;
+	align-items: center;
+	gap: 5px;
+}
+
 main #bi_capitulos {
 	display: flex;
 	flex: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	margin: 10px auto;
 }
 
 main #conteudo {
 	padding: 10px 50px 50px 50px;
 }
+
 main #bi_livrocapitulo {
 	font-size: 22px;
 	font-weight: bold;
 	margin: 10px 0px;
 }
+
 main .bi_versiculo {
 	margin: 4px 0px;
 	text-align: justify;
+	padding: 2px 5px;
+	border-radius: 5px;
+}
+main .bi_versiculo.selected {
+	background: #E6E6E6;
 }
 main .bi_versiculo_numero {
 	color: #D61E25;
@@ -56,14 +78,14 @@ main .bi_versiculo_numero {
 
 @media screen and (max-width: 768px) {
 
+	main #seletores {
+		flex-direction: column;
+		align-items: initial;
+		padding: 10px 10px;
+	}
 
-main #seletores {
-	padding: 0px 10px;
-}
-
-main #conteudo {
-	padding: 10px;
-}
-
+	main #conteudo {
+		padding: 10px;
+	}
 
 }
