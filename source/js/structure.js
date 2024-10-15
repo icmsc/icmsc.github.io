@@ -75,7 +75,7 @@ export const structure = {
 				{
 					"link": "oracao",
 					"name": "Oração 24h",
-					"view": 0,
+					"view": 1,
 				},
 			]
 		},
