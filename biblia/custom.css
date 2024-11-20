@@ -62,3 +62,21 @@
 	}
 
 }
+
+
+/*dark*/
+body.dark #seletores {
+	background: #18181B;
+	color: #FFFFFF;
+}
+
+body.dark #bi_livrocapitulo {
+	color: #FFFFFF;
+}
+
+body.dark .bi_versiculo {
+	color: #FFFFFF;
+}
+body.dark .bi_versiculo.selected {
+	background: #18181B;
+}

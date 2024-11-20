@@ -31,8 +31,16 @@
 	flex: 1 1 50%;
 }
 .today {
-	background: #B8DB8A;
+	background: #B8DB8A !important;
+	color: #111111 !important;
 }
-.tomorrow {
+/*.tomorrow {
 	background: rgba(214, 30, 37, 0.15);
+}*/
+
+
+/*dark*/
+body.dark .days {
+	background: #18181B;
+	color: #FFFFFF;
 }

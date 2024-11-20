@@ -27,13 +27,16 @@
 /*header*/
 header {
 	height: 56px;
-	border-bottom: 1px solid #E8EBEE;
+	border-bottom: 2px solid #E8EBEE;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
+#header_logo {
+	cursor: pointer;
+}
 #header_logo svg {
 	height: 40px;
 	fill: #D61E25;
@@ -50,7 +53,7 @@ header {
 .header_button_item {
 	text-decoration: none;
 	color: #8D98A8;
-	padding: 8px 12px;
+	padding: 8px 8px;
 	border-radius: 12px;
 	font-weight: bold;
 }
@@ -64,6 +67,16 @@ header {
 .header_button_item svg {
 	fill: #D61E25;
 	width: 30px;
+}
+
+#header_theme {
+	cursor: pointer;
+}
+#header_theme svg {
+	fill: #8D98A8;
+}
+#header_theme:hover svg {
+	fill: #D61E25 !important;
 }
 
 
@@ -135,4 +148,26 @@ main {
 }
 
 
+}
+
+
+/*dark*/
+body.dark {
+	background: #1E1E21;
+}
+
+body.dark header {
+	border-color: #28282B;
+}
+
+body.dark .nav_title {
+	color: #FFFFFF;
+}
+
+body.dark .info_title {
+	color: #FFFFFF;
+}
+
+body.dark .info_text {
+	color: #FFFFFF;
 }

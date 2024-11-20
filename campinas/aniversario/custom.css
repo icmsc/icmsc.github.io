@@ -5,7 +5,7 @@
 	width: 92%;
 	min-width: 240px;
 	max-width: 580px;
-	margin: 0px auto;
+	margin: 0px auto 10px auto;
 	border-radius: 5px;
 	padding: 15px;
 	text-align: center;
@@ -31,6 +31,9 @@
 	border-radius: 5px;
 	margin-top: 10px;
 }
+.month:first-child {
+	margin-top: 0 !important;
+}
 .day {
 	position: relative;
 	display: flex;
@@ -49,8 +52,16 @@
 	right: 5px;
 }
 .today {
-	background: #B8DB8A;
+	background: #B8DB8A !important;
+	color: #111111 !important;
 }
 .tomorrow {
 	background: #FFCFC7;
+}
+
+
+/*dark*/
+body.dark .day {
+	background: #18181B;
+	color: #FFFFFF;
 }
