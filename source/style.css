@@ -130,5 +130,9 @@ main {
 	display: none;
 }
 
+#header_logo svg {
+	height: 32px;
+}
+
 
 }
