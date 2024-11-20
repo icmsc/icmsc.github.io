@@ -1,7 +1,7 @@
 function data90DiasAposHoje() {
 	const hoje = new Date();
 	const data90DiasDepois = new Date();
-	data90DiasDepois.setDate(hoje.getDate() + 90);
+	data90DiasDepois.setDate(hoje.getDate() + 60);
 	const dia = data90DiasDepois.getDate();
 	const mes = data90DiasDepois.getMonth() + 1;
 	const ano = data90DiasDepois.getFullYear();
@@ -51,7 +51,7 @@ function listarProximosTresMeses() {
 function obterMesesProximos() {
 	const dataAtual = new Date();
 	let meses = [];
-	for (let i = 0; i < 3; i++) {
+	for (let i = 0; i < 2; i++) {
 		var ano = dataAtual.getFullYear();
 		var mes = dataAtual.getMonth() + i;
 		if (mes >= 12) {
