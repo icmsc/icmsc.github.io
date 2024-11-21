@@ -19,6 +19,12 @@
 	margin: auto;
 }
 
+.monthbox {
+	margin-top: 10px;
+}
+.monthbox:first-child {
+	margin-top: 0 !important;
+}
 .month {
 	font-weight: bold;
 	background: #D61E25;
@@ -29,10 +35,6 @@
 	align-items: center;
 	padding: 5px;
 	border-radius: 5px;
-	margin-top: 10px;
-}
-.month:first-child {
-	margin-top: 0 !important;
 }
 .day {
 	position: relative;
@@ -57,6 +59,18 @@
 }
 .tomorrow {
 	background: #FFCFC7;
+}
+
+
+/*mobile*/
+@media screen and (max-width: 768px) {
+
+
+#share {
+	width: 100%;
+}
+
+
 }
 
 
