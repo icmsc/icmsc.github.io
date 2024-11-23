@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plano de Leitura Bíblica</title>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <style>
+    /* #3B5998 - azul */
+    body {
+      font-family: 'Source Code Pro', serif;
+      font-size: 13px;
+      line-height: 1;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #D61E25;
+      color: white;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #content {
+      max-width: 800px;
+      margin: 92px auto 20px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 10px;
+    }
+    .month {
+      padding: 10px 20PX;
+      border-bottom: 1px solid #ddd;
+    }
+    .month:last-child {
+      border-bottom: none;
+    }
+    .month h2 {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .day {
+      padding: 10px 0;
+      border-bottom: 1px dashed #ddd;
+      color: #555;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+    .day:last-child {
+      border-bottom: none;
+    }
+    .day span {
+      font-weight: bold;
+      color: #D61E25;
+      background-color: #E6E6E6;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-right: 20px;
+    }
+    .day.past {
+      color: #999;
+      text-decoration: line-through;
+    }
+    .day.past span {
+      color: #777;
+      background-color: #E6E6E6;
+    }
+    .day.today {
+      /* background-color: #B8DB8A; */
+      font-weight: bold;
+      color: #333333;
+    }
+    .day.today span {
+      color: #FFFFFF;
+      background-color: #D61E25;
+    }
+    .error {
+      color: red;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Plano Anual de Leitura Bíblica</h2>
+  </header>
+  
+  <div id="content"></div>
+
+  <script>
+    // Função para carregar o JSON
+    function loadJson(file, callback) {
+      const xhr = new XMLHttpRequest();
+      xhr.overrideMimeType("application/json");
+      xhr.open("GET", file, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            const jsonData = JSON.parse(xhr.responseText);
+            // console.log("JSON carregado:", jsonData); // Verifica se o JSON está correto
+            callback(jsonData);
+          } else {
+            // console.error("Erro ao carregar o JSON:", xhr.status);
+            document.getElementById('content').innerHTML = `
+              <div class="error">Erro ao carregar os dados. Verifique o arquivo JSON.</div>
+            `;
+          }
+        }
+      };
+      xhr.send(null);
+    }
+
+    // Função para renderizar os dados na página
+    function renderData(data) {
+      // console.log("Renderizando os dados...");
+      const content = document.getElementById('content');
+      const today = new Date();
+      const year = today.getFullYear();
+      const currentMonth = today.getMonth();
+      const currentDay = today.getDate();
+
+      // Verifique se o ano está no JSON
+      // console.log("Ano atual:", year); // Verifica o ano atual
+      if (!data[year]) {
+        // console.error("Ano não encontrado no JSON", data); // Verifica o que está no JSON
+        content.innerHTML = '<div class="error">Ano não encontrado no JSON</div>';
+        return;
+      }
+
+      const months = data[year];
+      // console.log("Meses:", months);
+
+      const monthNames = [
+        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+        'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+      ];
+
+      let dayIdToScroll = null;
+
+      // Itera pelos meses
+      for (const month in months) {
+        const monthIndex = monthNames.indexOf(month);
+        const monthDiv = document.createElement('div');
+        monthDiv.classList.add('month');
+        const monthTitle = document.createElement('h2');
+        // monthTitle.textContent = `${month} ${year}`;
+        monthTitle.textContent = `${month}`;
+        monthDiv.appendChild(monthTitle);
+
+        const days = months[month];
+        // console.log("Dias do mês:", days);
+
+        const sortedDays = Object.keys(days).sort((a, b) => Number(a) - Number(b));
+
+        // Itera pelos dias
+        sortedDays.forEach(day => {
+          const dayDiv = document.createElement('div');
+          dayDiv.classList.add('day');
+          let dayContent = days[day].replaceAll(";", "/");
+          dayDiv.innerHTML = `<span>${day}</span> ${dayContent}`;
+
+          // Aplica classes para passado, presente e futuro
+          const dayNum = Number(day);
+          const dayId = `day-${month}-${day}`;
+          dayDiv.id = dayId;
+
+          // Verifica todos os dias do ano
+          if (year < today.getFullYear() || (year === today.getFullYear() && monthIndex < currentMonth) || (year === today.getFullYear() && monthIndex === currentMonth && dayNum < currentDay)) {
+            dayDiv.classList.add('past');
+          }
+
+          // Marca o dia atual
+          if (year === today.getFullYear() && monthIndex === currentMonth && dayNum === currentDay) {
+            dayDiv.classList.add('today');
+            dayIdToScroll = dayId;
+          }
+
+          monthDiv.appendChild(dayDiv);
+        });
+
+        content.appendChild(monthDiv);
+      }
+
+      // Scroll até o dia atual
+      if (dayIdToScroll) {
+        const dayElement = document.getElementById(dayIdToScroll);
+        if (dayElement) {
+          dayElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        }
+      }
+    }
+
+    loadJson('plano.json', renderData);
+  </script>
+</body>
+</html>
