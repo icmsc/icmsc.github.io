@@ -131,7 +131,7 @@ const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Ag
 
 const dataBase = new Date(2025, 1, 28); // yyyy, mm (real -1), dd
 const dataBaseString = "28/02/2025"; // dd/mm/yyyy
-const grupoBase = 0;
+const grupoBase = 3;
 const diasDaSemana = [0, 1, 2, 3, 4, 5, 6];
 const grupos = ["G1 - Eduardo", "G2 - Daniel", "G3 - Rodrigo", "G4 - Feijó"];
 
