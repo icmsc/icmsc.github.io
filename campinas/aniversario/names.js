@@ -31,7 +31,7 @@ const names = [
 	{"mes":"03", "dia":"09", "sexo":"F", "classe":"T", "nome":"TANIA GUIRALDELLI", "fone":""},
 	{"mes":"03", "dia":"17", "sexo":"M", "classe":"T", "nome":"MARCO ANTÔNIO SALDANHA FEIJÓ", "fone":"48999412863"},
 	// {"mes":"03", "dia":"18", "sexo":"F", "classe":"T", "nome":"MÁRCIA DOS SANTOS RIBEIRO VELTER", "fone":"48984855851"},
-	{"mes":"03", "dia":"18", "sexo":"M", "classe":"J", "nome":"NICOLAS RODRIGUES", "fone":""},
+	// {"mes":"03", "dia":"18", "sexo":"M", "classe":"J", "nome":"NICOLAS RODRIGUES", "fone":""},
 	{"mes":"03", "dia":"19", "sexo":"F", "classe":"I", "nome":"ELISA BARBI", "fone":"48996690181"},
 	{"mes":"03", "dia":"22", "sexo":"F", "classe":"A", "nome":"VALENTINA DA ROSA", "fone":"48998436192"},
 	{"mes":"03", "dia":"22", "sexo":"F", "classe":"T", "nome":"VIVIANNE LEAL", "fone":"48999387646"},
