@@ -1,0 +1,46 @@
+#group {
+	max-width: 580px;
+	margin: auto;
+}
+
+.month {
+	font-weight: bold;
+	background: #D61E25;
+	color: #FFFFFF;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+.month:first-child {
+	margin-top: 0 !important;
+}
+.days {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: #E6E6E6;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 5px;
+}
+.daysitem {
+	flex: 1 1 50%;
+}
+.today {
+	background: #B8DB8A !important;
+	color: #111111 !important;
+}
+.tomorrow {
+	background: rgba(214, 30, 37, 0.15);
+}
+
+
+/*dark*/
+body.dark .days {
+	background: #18181B;
+	color: #FFFFFF;
+}
