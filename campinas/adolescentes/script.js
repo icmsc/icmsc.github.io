@@ -1,7 +1,7 @@
 function data90DiasAposHoje() {
 	const hoje = new Date();
 	const data90DiasDepois = new Date();
-	data90DiasDepois.setDate(hoje.getDate() + 60);
+	data90DiasDepois.setDate(hoje.getDate() + 90);
 	const dia = data90DiasDepois.getDate();
 	const mes = data90DiasDepois.getMonth() + 1;
 	const ano = data90DiasDepois.getFullYear();
