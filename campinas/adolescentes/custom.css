@@ -37,6 +37,13 @@
 .tomorrow {
 	background: rgba(214, 30, 37, 0.15);
 }
+.days.past {
+	opacity: 0.45;
+	filter: grayscale(1);
+}
+.days.past .daysitem {
+	text-decoration: line-through;
+}
 
 
 /*dark*/
