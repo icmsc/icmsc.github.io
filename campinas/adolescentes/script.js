@@ -133,7 +133,7 @@ const dataBase = new Date(2025, 11, 28); // yyyy, mm (real -1), dd
 const dataBaseString = "28/12/2025"; // dd/mm/yyyy
 const grupoBase = 2;
 const diasDaSemana = [0];
-const grupos = ["Cristiane", "Elenice", "Jacqueline"];
+const grupos = ["Jacqueline", "Cristiane"];
 
 const listaDeGrupo = listarProximosTresMeses();
 const mesesProximos = obterMesesProximos();
