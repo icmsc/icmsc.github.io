@@ -126,6 +126,22 @@ function extrairNomeDoMes(dataString, meses) {
 	return meses[mes - 1];
 }
 
+function dataJaPassou(dataString) {
+	const partes = dataString.split('/');
+	if (partes.length !== 3) return false;
+	
+	const dia = parseInt(partes[0], 10);
+	const mes = parseInt(partes[1], 10) - 1;
+	const ano = parseInt(partes[2], 10);
+	const dataItem = new Date(ano, mes, dia);
+	const hoje = new Date();
+
+	dataItem.setHours(0,0,0,0);
+	hoje.setHours(0,0,0,0);
+
+	return dataItem < hoje;
+}
+
 const semana = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
 const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
@@ -147,6 +163,18 @@ for (var i = 0; i < listaDeGrupo.length; i++) {
 			element.insertAdjacentHTML('beforeend', '<div class="month">'+extrairNomeDoMes(listaDeGrupo[i].data, meses)+' '+extrairAno(listaDeGrupo[i].data)+'</div>');
 			mesImpressao = extrairMesAno(listaDeGrupo[i].data);
 		}
-		element.insertAdjacentHTML('beforeend', '<div class="days '+dataEhHojeOuAmanha(listaDeGrupo[i].data)+'"> <div class="daysitem daynumber">'+extrairDiaMes(listaDeGrupo[i].data)+' - '+semana[listaDeGrupo[i].diaDaSemana]+'</div> <div class="daysitem daygroup">'+listaDeGrupo[i].grupoResponsavel+'</div> </div>');
+		const classeStatus = dataEhHojeOuAmanha(listaDeGrupo[i].data);
+		const classePassado = dataJaPassou(listaDeGrupo[i].data) ? 'past' : '';
+		element.insertAdjacentHTML(
+			'beforeend',
+			'<div class="days '+classeStatus+' '+classePassado+'">' +
+				'<div class="daysitem daynumber">' +
+					extrairDiaMes(listaDeGrupo[i].data)+' - '+semana[listaDeGrupo[i].diaDaSemana] +
+				'</div>' +
+				'<div class="daysitem daygroup">' +
+					listaDeGrupo[i].grupoResponsavel +
+				'</div>' +
+			'</div>'
+		);
 	}
 }
