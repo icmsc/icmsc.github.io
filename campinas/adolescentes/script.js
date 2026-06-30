@@ -146,7 +146,7 @@ const semana = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"
 const meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
 const dataBase = new Date(2026, 5, 28); // yyyy, mm (real -1), dd
-const dataBaseString = "28/12/2025"; // dd/mm/yyyy
+const dataBaseString = "28/06/2026"; // dd/mm/yyyy
 const grupoBase = 2;
 const diasDaSemana = [0];
 const grupos = ["Cristiane", "Sandra", "Elenice", "Jacqueline"];
